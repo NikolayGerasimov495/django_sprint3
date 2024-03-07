@@ -3,6 +3,8 @@ from django.contrib.auth import get_user_model
 from core.models import PublishedModel
 
 TITLE_MAX_LENGTH = 256
+TITLE_LENGTH_OUTPUT = 10
+
 
 User = get_user_model()
 
@@ -23,7 +25,7 @@ class Category(PublishedModel):
         verbose_name_plural = 'Категории'
 
     def __str__(self):
-        return self.title[:10]
+        return self.title[:TITLE_LENGTH_OUTPUT]
 
 
 class Location(PublishedModel):
@@ -36,7 +38,7 @@ class Location(PublishedModel):
         verbose_name_plural = 'Местоположения'
 
     def __str__(self):
-        return self.name[:10]
+        return self.name[:TITLE_LENGTH_OUTPUT]
 
 
 class Post(PublishedModel):
@@ -72,4 +74,4 @@ class Post(PublishedModel):
         verbose_name_plural = 'Публикации'
 
     def __str__(self):
-        return self.title[:10]
+        return self.title[:TITLE_LENGTH_OUTPUT]
