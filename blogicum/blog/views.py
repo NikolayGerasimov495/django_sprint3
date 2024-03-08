@@ -1,5 +1,6 @@
-from blog.models import Category
 from django.shortcuts import get_object_or_404, render
+
+from blog.models import Category
 from core.get_published_posts import get_published_posts
 
 
