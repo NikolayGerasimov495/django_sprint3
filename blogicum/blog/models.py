@@ -1,6 +1,7 @@
-from django.contrib.auth import get_user_model
-from core.models import PublishedModel
 from django.db import models
+from django.contrib.auth import get_user_model
+
+from core.models import PublishedModel
 
 
 TITLE_MAX_LENGTH = 256
